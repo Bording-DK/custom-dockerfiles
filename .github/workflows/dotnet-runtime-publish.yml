@@ -32,4 +32,4 @@ jobs:
         file: ./dotnet-runtime-Dockerfile
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner }}/dotnet-runtime:latest
+          ghcr.io/bording-dk/dotnet-runtime:latest
