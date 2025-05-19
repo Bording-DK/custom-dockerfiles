@@ -1,6 +1,8 @@
-FROM central.azurecr.io/dotnet/runtime-deps:9.0-alpine-extra
+FROM mcr.microsoft.com/dotnet/runtime-deps:9.0-alpine-extra
 
-RUN apk --no-cache add msttcorefonts-installer fontconfig
-RUN update-ms-fonts
-RUN fc-cache -f
-RUN rm -rf /var/cache/apk/*
+RUN apk --no-cache add \
+        msttcorefonts-installer \
+        fontconfig \
+    && update-ms-fonts \
+    && fc-cache -f \
+    && rm -rf /var/cache/apk/*
